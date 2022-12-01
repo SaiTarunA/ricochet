@@ -1,0 +1,2 @@
+:root{--text:#eee;--background:#222831;--primary:#52c1ff;--nav-height:70px}*,body{margin:0;box-sizing:border-box;background:#222831;background:var(--background);color:#eee;color:var(--text)}.navbar{width:100%;height:var(--nav-height);background:red;position:fixed;top:0}
+/*# sourceMappingURL=main.fca66481.chunk.css.map */
