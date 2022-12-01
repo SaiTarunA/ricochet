@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e196d3b81a9ed669bf0dd3c9ab1ac3d",
+    "revision": "00b5f89b36332d5f697735544feb9caf",
     "url": "/ricochet/index.html"
   },
   {
-    "revision": "6c1934fe6175c50fcad9",
+    "revision": "09989626e0cee9ac48b5",
     "url": "/ricochet/static/css/main.2628e5e2.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ricochet/static/js/2.5417759c.chunk.js"
   },
   {
-    "revision": "6c1934fe6175c50fcad9",
-    "url": "/ricochet/static/js/main.40fed2f1.chunk.js"
+    "revision": "09989626e0cee9ac48b5",
+    "url": "/ricochet/static/js/main.7b100b40.chunk.js"
   },
   {
     "revision": "324177345c4d101fa635",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ricochet/static/css/main.2628e5e2.chunk.css",
-    "main.js": "/ricochet/static/js/main.40fed2f1.chunk.js",
-    "main.js.map": "/ricochet/static/js/main.40fed2f1.chunk.js.map",
+    "main.js": "/ricochet/static/js/main.7b100b40.chunk.js",
+    "main.js.map": "/ricochet/static/js/main.7b100b40.chunk.js.map",
     "runtime~main.js": "/ricochet/static/js/runtime~main.96d2087a.js",
     "runtime~main.js.map": "/ricochet/static/js/runtime~main.96d2087a.js.map",
     "static/js/2.5417759c.chunk.js": "/ricochet/static/js/2.5417759c.chunk.js",
     "static/js/2.5417759c.chunk.js.map": "/ricochet/static/js/2.5417759c.chunk.js.map",
     "index.html": "/ricochet/index.html",
-    "precache-manifest.fd91d86e4a6b70ce5d8b06ee6a9cf503.js": "/ricochet/precache-manifest.fd91d86e4a6b70ce5d8b06ee6a9cf503.js",
+    "precache-manifest.ed81b8287f31eb8bfa5ccad7241cc8e1.js": "/ricochet/precache-manifest.ed81b8287f31eb8bfa5ccad7241cc8e1.js",
     "service-worker.js": "/ricochet/service-worker.js",
     "static/css/main.2628e5e2.chunk.css.map": "/ricochet/static/css/main.2628e5e2.chunk.css.map",
     "static/media/edit_icon.svg": "/ricochet/static/media/edit_icon.8c756a0a.svg",
