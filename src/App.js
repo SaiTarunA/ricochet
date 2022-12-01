@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { CART_PAGE_LINK, MAIN_PAGE_LINK, NO_PRODUCT_PAGE_LINK, SCAN_PAGE_LINK } from "./components/constants/Global";
+import { CART_PAGE_LINK, MAIN_PAGE_LINK, NO_PRODUCT_PAGE_LINK, SCAN_PAGE_LINK, SUCCESS_PAYMENT_LINK } from "./components/constants/Global";
 import NavBar from "./components/nav-bar";
 import Cart from "./components/sections/cart";
 import ProductNotFound from "./components/sections/product-not-found";
@@ -8,7 +8,8 @@ import Scanner from "./components/sections/scanner";
 import Welcome from "./components/sections/welcome";
 import { setGlobalState, useGlobalState } from "./components/state";
 import "./styles.css";
-import {Listing} from "./components/listing"
+import {Listing} from "./components/listing";
+import PaymentSuccess from "./components/sections/payment-successful"
 
 function App() {
   const [hasNavBar] = useGlobalState("hasNavBar");
@@ -44,7 +45,14 @@ function App() {
         <Route
           exact
           path={CART_PAGE_LINK}
-          element={<Listing/>}
+          element={<Listing/>
+        }
+        />
+        <Route
+          exact
+          path={SUCCESS_PAYMENT_LINK}
+          element={<PaymentSuccess/>
+        }
         />
         <Route
           exact

@@ -23,14 +23,13 @@ const FixedDiv = styled.div`
   top: 0;
   right: 0;
   padding: 0 10px 10px 10px;
-  background-color: ${lightGray};
   border-radius: 0 0 0 20px;
 `;
 const CartNumber = styled.div`
   text-align: center;
   font-size: 14px;
   width: 15px;
-  color: white;
+  color: black;
   position: absolute;
   top: 4px;
   right: 7px;

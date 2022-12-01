@@ -7,6 +7,7 @@ const { setGlobalState, useGlobalState } = createGlobalState({
   isWebCam: false,
   finalCode: "",
   navBarInnerComp: null,
+  isLoading: false,
 });
 
 export { useGlobalState, setGlobalState };

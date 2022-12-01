@@ -9,8 +9,11 @@ import { Overlay } from "./Overlay";
 
 import { GlobalStyles, lightGray } from "./GlobalStyles";
 import "./style.css";
+import { setGlobalState, useGlobalState } from "../state";
+import LoadingGif from "../../assets/loading.gif";
 
 export function Listing() {
+  const [isLoading] = useGlobalState("isLoading");
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
   const [cartOpen, isCartOpen] = useState(false);
@@ -101,6 +104,11 @@ export function Listing() {
 
   return (
     <>
+      {isLoading && (
+        <div className="loading_bg">
+          <img src={LoadingGif} alt="Loading..." />
+        </div>
+      )}
       <GlobalStyles />
       <CartDetails
         open={cartOpen}

@@ -9,7 +9,7 @@ export const ListedItems = ({
   items,
   increaseCount,
   decreaseCount,
-  addToCart
+  addToCart,
 }) => (
   <Wrapper>
     {items.map((item, i) => (
@@ -18,11 +18,11 @@ export const ListedItems = ({
         <P>₹{item.price}</P>
 
         {!item.inCart && (
-          <div>
+          <COUNTER_DIV>
             <AddButton onClick={() => increaseCount(i)} />
-            <span>{item.quantity}</span>
+            <SPAN>{item.quantity}</SPAN>
             <SubtractButton onClick={() => decreaseCount(i)} />
-          </div>
+          </COUNTER_DIV>
         )}
 
         <IMG src={item.src} alt={item.name} />
@@ -44,7 +44,6 @@ const Column = styled.article`
   padding: 12px 20px;
   border-radius: 10px;
   margin: 8px;
-  background-color: ${lightGray};
 `;
 const Wrapper = styled.div`
   max-width: 1100px;
@@ -62,4 +61,14 @@ const IMG = styled.img`
 const H4 = styled.h4`
   padding: 5px 0;
   font-size: 18px;
+`;
+
+const SPAN = styled.span`
+  margin: auto 0;
+`;
+
+const COUNTER_DIV = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 `;

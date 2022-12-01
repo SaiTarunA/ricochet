@@ -1,12 +1,12 @@
 import axios from 'axios';
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CART_PAGE_LINK, NO_PRODUCT_PAGE_LINK } from '../../constants/Global';
 import { setGlobalState, useGlobalState } from '../../state';
-import Scanner from './Scanner'
-import RetryIcon from "../../../assets/retry_icon.svg"
-import SearchIcon from "../../../assets/search_icon.svg"
-import LoadingGif from "../../../assets/loading.gif"
+import Scanner from './Scanner';
+import RetryIcon from "../../../assets/retry_icon.svg";
+import SearchIcon from "../../../assets/search_icon.svg";
+import LoadingGif from "../../../assets/loading.gif";
 
 const BarcodeScanner = () => {
     const [scanResult] = useGlobalState("scanResult")
@@ -53,12 +53,14 @@ const BarcodeScanner = () => {
                 if ("product" in response.data) {
                     navigate(CART_PAGE_LINK)
                 } else {
-                    navigate(NO_PRODUCT_PAGE_LINK)
+                    // navigate(NO_PRODUCT_PAGE_LINK)
+                    navigate(CART_PAGE_LINK)
                 }
               }).catch(function (error) {
                 setLoading(false)
                 console.log(error)
-                navigate(NO_PRODUCT_PAGE_LINK)
+                // navigate(NO_PRODUCT_PAGE_LINK)
+                navigate(CART_PAGE_LINK)
               })
         } catch (error) {
             console.log(error.response)

@@ -5,12 +5,17 @@ import { Button } from "./Button";
 import { AddButton, SubtractButton } from "./AddSubtractButton";
 
 export const CartButtons = ({ increaseQ, decreaseQ, removeFromCart }) => (
-  <div>
+  <DIV>
     <AddButton onClick={increaseQ} />
     <SubtractButton onClick={decreaseQ} />
     <RemoveButton onClick={removeFromCart}>Remove</RemoveButton>
-  </div>
+  </DIV>
 );
 const RemoveButton = styled(Button)`
   padding: 5px 10px;
+  background-color: #57c1ff;
+`;
+
+const DIV = styled.div`
+  display: flex;
 `;

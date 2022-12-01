@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0;
 }
  body { 
-  background: #1C2333; 
+  background: #222831; 
   /* background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
  }
 `;

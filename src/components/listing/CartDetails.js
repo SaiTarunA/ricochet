@@ -12,7 +12,7 @@ export const CartDetails = ({
   cartCountTotal,
   removeFromCart,
   open,
-  onClose
+  onClose,
 }) => {
   return (
     <OpenWrapper open={open}>
@@ -39,7 +39,7 @@ const OpenWrapper = styled.div`
   top: 0;
   right: 0;
   z-index: 134;
-  background-color: ${lightGray};
+  background-color: #222831;
   width: 320px;
   transform: translateX(${({ open }) => (open ? "0px" : "320px")});
   transition: transform 0.5s;
