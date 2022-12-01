@@ -7,18 +7,28 @@ import Scanner from './Scanner';
 import RetryIcon from "../../../assets/retry_icon.svg";
 import SearchIcon from "../../../assets/search_icon.svg";
 import LoadingGif from "../../../assets/loading.gif";
+import { useRef } from 'react';
+
+export const useFocus = () => {
+	const htmlElRef = useRef(null)
+	const setFocus = () => {htmlElRef.current &&  htmlElRef.current.focus()}
+
+	return [ htmlElRef,  setFocus ] 
+}
 
 const BarcodeScanner = () => {
     const [scanResult] = useGlobalState("scanResult")
     const [codeText] = useGlobalState("codeText")
     const [finalCode] = useGlobalState("finalCode")
     const [loading, setLoading] = React.useState(false)
+    const [inputRef, setInputFocus] = useFocus()
 
     const navigate = useNavigate()
 
     const _onDetected = (result) => {
         setGlobalState("scanResult", [])
         setGlobalState("scanResult", scanResult.concat([result]))
+        setInputFocus()
       };
 
       const handleInputChange = (e) => {
@@ -88,6 +98,7 @@ const BarcodeScanner = () => {
         <div className='barcode_overlay_section_bg'>
             <div className='barcode_overlay_section workspace'>
         <input
+        ref={inputRef}
         placeholder='Enter Code'
         value={scanResult[0] && scanResult[0].codeResult
             ? scanResult[0].codeResult.code
