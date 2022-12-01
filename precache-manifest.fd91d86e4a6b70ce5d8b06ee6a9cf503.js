@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4492c18ca8254e7a8e10a23003f5f196",
+    "revision": "2e196d3b81a9ed669bf0dd3c9ab1ac3d",
     "url": "/ricochet/index.html"
   },
   {
-    "revision": "fc06039a9a2384bf943b",
-    "url": "/ricochet/static/css/main.4047a886.chunk.css"
+    "revision": "6c1934fe6175c50fcad9",
+    "url": "/ricochet/static/css/main.2628e5e2.chunk.css"
   },
   {
-    "revision": "4eced523f5f9f5d01cfc",
-    "url": "/ricochet/static/js/2.eed843c2.chunk.js"
+    "revision": "97ba6420d321dd089300",
+    "url": "/ricochet/static/js/2.5417759c.chunk.js"
   },
   {
-    "revision": "fc06039a9a2384bf943b",
-    "url": "/ricochet/static/js/main.542a35d4.chunk.js"
+    "revision": "6c1934fe6175c50fcad9",
+    "url": "/ricochet/static/js/main.40fed2f1.chunk.js"
   },
   {
     "revision": "324177345c4d101fa635",
