@@ -1,0 +1,7 @@
+.navbar {
+    width: 100%;
+    height: var(--nav-height);
+    background: red;
+    position: fixed;
+    top: 0;
+}
