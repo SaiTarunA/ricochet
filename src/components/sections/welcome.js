@@ -2,9 +2,9 @@ import React from 'react'
 import { setGlobalState } from '../state'
 import "../../styles/welcome.css"
 import { NavLink } from 'react-router-dom'
-import { SCAN_PAGE_LINK } from '../constants/Global'
+import { STORES_LIST_PAGE_LINK } from '../constants/Global'
 import "../../styles/welcome.css"
-import {ReactComponent as Logo} from "../../assets/logo_white.svg"
+import {ReactComponent as Logo} from "../../assets/logo.svg"
 import {ReactComponent as HomeImage} from "../../assets/home_image.svg"
 import RightArrowIcon from "../../assets/right_arrow_icon.svg"
 
@@ -32,7 +32,7 @@ if (props.hasNavBar === true) {
                         Like a PRO
                     </div>
                 </div>
-                <NavLink to={SCAN_PAGE_LINK} style={{width: "100%"}}>
+                <NavLink to={STORES_LIST_PAGE_LINK} style={{width: "100%"}}>
                     <button type="primary" style={{width: "100%"}}>
                         <span>Let's Go</span>
                         <img src={RightArrowIcon} alt="->" />

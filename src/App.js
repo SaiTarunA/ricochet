@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { CART_PAGE_LINK, MAIN_PAGE_LINK, NO_PRODUCT_PAGE_LINK, SCAN_PAGE_LINK, SUCCESS_PAYMENT_LINK } from "./components/constants/Global";
+import { CART_PAGE_LINK, MAIN_PAGE_LINK, NO_PRODUCT_PAGE_LINK, SCAN_PAGE_LINK, STORES_LIST_PAGE_LINK, SUCCESS_PAYMENT_LINK } from "./components/constants/Global";
 import NavBar from "./components/nav-bar";
 import Cart from "./components/sections/cart";
 import ProductNotFound from "./components/sections/product-not-found";
 import Scanner from "./components/sections/scanner";
+import StoresList from "./components/sections/stores-list";
 import Welcome from "./components/sections/welcome";
 import { setGlobalState, useGlobalState } from "./components/state";
 import "./styles.css";
@@ -36,6 +37,11 @@ function App() {
           exact
           path={MAIN_PAGE_LINK}
           element={<Welcome hasNavBar={hasNavBar} sectionStyle={sectionStyle}/>}
+        />
+        <Route
+          exact
+          path={STORES_LIST_PAGE_LINK}
+          element={<StoresList hasNavBar={hasNavBar} sectionStyle={sectionStyle}/>}
         />
         <Route
           exact
