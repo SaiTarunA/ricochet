@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/ricochet/static/css/main.cdbd78d9.chunk.css",
-    "main.js": "/ricochet/static/js/main.9ca88576.chunk.js",
-    "main.js.map": "/ricochet/static/js/main.9ca88576.chunk.js.map",
+    "main.css": "/ricochet/static/css/main.4047a886.chunk.css",
+    "main.js": "/ricochet/static/js/main.542a35d4.chunk.js",
+    "main.js.map": "/ricochet/static/js/main.542a35d4.chunk.js.map",
     "runtime~main.js": "/ricochet/static/js/runtime~main.96d2087a.js",
     "runtime~main.js.map": "/ricochet/static/js/runtime~main.96d2087a.js.map",
-    "static/js/2.695a8c2e.chunk.js": "/ricochet/static/js/2.695a8c2e.chunk.js",
-    "static/js/2.695a8c2e.chunk.js.map": "/ricochet/static/js/2.695a8c2e.chunk.js.map",
+    "static/js/2.eed843c2.chunk.js": "/ricochet/static/js/2.eed843c2.chunk.js",
+    "static/js/2.eed843c2.chunk.js.map": "/ricochet/static/js/2.eed843c2.chunk.js.map",
     "index.html": "/ricochet/index.html",
-    "precache-manifest.fea7d85232441cebb8818dbf7ff5dccd.js": "/ricochet/precache-manifest.fea7d85232441cebb8818dbf7ff5dccd.js",
+    "precache-manifest.434d844c021b5cd88168741c03860eea.js": "/ricochet/precache-manifest.434d844c021b5cd88168741c03860eea.js",
     "service-worker.js": "/ricochet/service-worker.js",
-    "static/css/main.cdbd78d9.chunk.css.map": "/ricochet/static/css/main.cdbd78d9.chunk.css.map",
+    "static/css/main.4047a886.chunk.css.map": "/ricochet/static/css/main.4047a886.chunk.css.map",
+    "static/media/edit_icon.svg": "/ricochet/static/media/edit_icon.8c756a0a.svg",
     "static/media/home_image.477ace92.svg": "/ricochet/static/media/home_image.477ace92.svg",
     "static/media/loading.gif": "/ricochet/static/media/loading.bda9459f.gif",
-    "static/media/logo_white.aacddcdc.svg": "/ricochet/static/media/logo_white.aacddcdc.svg",
+    "static/media/location_icon.svg": "/ricochet/static/media/location_icon.79190084.svg",
+    "static/media/logo.7334f1b2.svg": "/ricochet/static/media/logo.7334f1b2.svg",
     "static/media/retry_icon.svg": "/ricochet/static/media/retry_icon.27ff3feb.svg",
     "static/media/right_arrow_icon.svg": "/ricochet/static/media/right_arrow_icon.7031021c.svg",
-    "static/media/search_icon.svg": "/ricochet/static/media/search_icon.d63e4d06.svg"
+    "static/media/search_icon.svg": "/ricochet/static/media/search_icon.d63e4d06.svg",
+    "static/media/store_dmart.svg": "/ricochet/static/media/store_dmart.a3a6f21a.svg",
+    "static/media/store_more.svg": "/ricochet/static/media/store_more.46f0fe30.svg",
+    "static/media/store_rating.svg": "/ricochet/static/media/store_rating.3896cf31.svg",
+    "static/media/store_ratnadeep.svg": "/ricochet/static/media/store_ratnadeep.7fb654af.svg"
   }
 }
