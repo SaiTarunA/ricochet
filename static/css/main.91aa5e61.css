@@ -1,2 +1,0 @@
-:root{--text:#000;--background:#fff;--primary:#52c1ff;--nav-height:70px}*,body{background:#fff;background:var(--background);box-sizing:border-box;margin:0}.navbar{background:red;height:var(--nav-height);position:fixed;top:0;width:100%}
-/*# sourceMappingURL=main.91aa5e61.css.map*/
