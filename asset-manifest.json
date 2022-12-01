@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/ricochet/static/css/main.fca66481.chunk.css",
-    "main.js": "/ricochet/static/js/main.3cd84ea8.chunk.js",
-    "main.js.map": "/ricochet/static/js/main.3cd84ea8.chunk.js.map",
+    "main.css": "/ricochet/static/css/main.fd95be5b.chunk.css",
+    "main.js": "/ricochet/static/js/main.fc931097.chunk.js",
+    "main.js.map": "/ricochet/static/js/main.fc931097.chunk.js.map",
     "runtime~main.js": "/ricochet/static/js/runtime~main.96d2087a.js",
     "runtime~main.js.map": "/ricochet/static/js/runtime~main.96d2087a.js.map",
-    "static/js/2.7f3ea7aa.chunk.js": "/ricochet/static/js/2.7f3ea7aa.chunk.js",
-    "static/js/2.7f3ea7aa.chunk.js.map": "/ricochet/static/js/2.7f3ea7aa.chunk.js.map",
+    "static/js/2.17ee26b7.chunk.js": "/ricochet/static/js/2.17ee26b7.chunk.js",
+    "static/js/2.17ee26b7.chunk.js.map": "/ricochet/static/js/2.17ee26b7.chunk.js.map",
     "index.html": "/ricochet/index.html",
-    "precache-manifest.af957ef79c7b534d13b108eb52447999.js": "/ricochet/precache-manifest.af957ef79c7b534d13b108eb52447999.js",
+    "precache-manifest.40254c8a8b9445b2b07681a008163a30.js": "/ricochet/precache-manifest.40254c8a8b9445b2b07681a008163a30.js",
     "service-worker.js": "/ricochet/service-worker.js",
-    "static/css/main.fca66481.chunk.css.map": "/ricochet/static/css/main.fca66481.chunk.css.map",
-    "static/media/logo_white.aacddcdc.svg": "/ricochet/static/media/logo_white.aacddcdc.svg"
+    "static/css/main.fd95be5b.chunk.css.map": "/ricochet/static/css/main.fd95be5b.chunk.css.map",
+    "static/media/home_image.477ace92.svg": "/ricochet/static/media/home_image.477ace92.svg",
+    "static/media/loading.gif": "/ricochet/static/media/loading.bda9459f.gif",
+    "static/media/logo_white.aacddcdc.svg": "/ricochet/static/media/logo_white.aacddcdc.svg",
+    "static/media/retry_icon.svg": "/ricochet/static/media/retry_icon.27ff3feb.svg",
+    "static/media/right_arrow_icon.svg": "/ricochet/static/media/right_arrow_icon.7031021c.svg",
+    "static/media/search_icon.svg": "/ricochet/static/media/search_icon.d63e4d06.svg"
   }
 }
