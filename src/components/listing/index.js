@@ -12,7 +12,7 @@ import "./style.css";
 import { setGlobalState, useGlobalState } from "../state";
 import LoadingGif from "../../assets/loading.gif";
 
-export function Listing() {
+export function Listing(props) {
   const [isLoading] = useGlobalState("isLoading");
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
@@ -102,8 +102,14 @@ export function Listing() {
 
   const cartCountTotal = cart.reduce((acc, item) => acc + item.quantity, 0);
 
+  React.useEffect(() => {
+    if (props.hasNavBar === true) {
+        setGlobalState("hasNavBar", false)
+    }
+    }, [props.hasNavBar])
+
   return (
-    <>
+    <section style={props.sectionStyle}>
       {isLoading && (
         <div className="loading_bg">
           <img src={LoadingGif} alt="Loading..." />
@@ -132,7 +138,7 @@ export function Listing() {
           addToCart={addToCart}
         />
       </Wrapper>
-    </>
+    </section>
   );
 }
 

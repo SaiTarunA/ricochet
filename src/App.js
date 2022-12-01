@@ -51,7 +51,7 @@ function App() {
         <Route
           exact
           path={CART_PAGE_LINK}
-          element={<Listing/>
+          element={<Listing hasNavBar={hasNavBar} sectionStyle={sectionStyle}/>
         }
         />
         <Route

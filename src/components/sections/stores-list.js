@@ -10,18 +10,35 @@ import StoreRating from "../../assets/store_rating.svg"
 import "../../styles/storeslist.css"
 import { NavLink } from 'react-router-dom'
 import { SCAN_PAGE_LINK } from '../constants/Global'
+import { useNavigate } from 'react-router-dom/dist'
+import GoBackIcon from "../../assets/right_arrow_icon.svg"
 
 const StoresList = (props) => {
     const [latitude] = useGlobalState("latitude")
     const [longitude] = useGlobalState("longitude")
     const [locationInfo] = useGlobalState("locationInfo")
-    const [loading, setLoading] = React.useState(false)
+    const [isLoading, setLoading] = React.useState(false)
+
+    let navigate = useNavigate()
 
     React.useEffect(() => {
-        if (props.hasNavBar === true) {
-            setGlobalState("hasNavBar", false)
+        if (!props.hasNavBar) {
+        setGlobalState("hasNavBar", true)
         }
     }, [props.hasNavBar])
+
+    React.useEffect(() => {
+        const navbarText = <div className='navbar_main_bg' style={{background: "var(--background2)"}}><div className='navbar_main workspace'>
+            <div onClick={() => navigate(-1)} className="go_back_icon">
+                <img src={GoBackIcon} alt="Back"/>
+            </div>
+            <div className="navbar_scan_title">Select Store</div>
+        </div></div>
+        setGlobalState("navBarInnerComp", navbarText)
+      return () => {
+        setGlobalState("navBarInnerComp", null)
+      }
+    }, [])
 
     React.useEffect(() => {
         if (navigator.geolocation) {
@@ -60,11 +77,8 @@ const StoresList = (props) => {
                 console.error(error);
                 setLoading(false)
             });
-            setLoading(false)
         }
     }, [latitude, longitude])
-    
-    
         
     return (
         <section style={props.sectionStyle}>
@@ -74,7 +88,7 @@ const StoresList = (props) => {
                         <img src={LocationIcon} alt="Loc" />
                     </div>
                     <div className='location_text'>
-                    {loading ? "Loading..." : locationInfo}
+                    {isLoading ? "Loading..." : locationInfo}
                     </div>
                     <div className='location_edit_icon'>
                         <img src={EditIcon} alt="Loc" />
@@ -95,7 +109,7 @@ const StoresList = (props) => {
                                 D-Mart
                             </div>
                             <div className='product_card_subtitle'>
-                            {loading ? "Loading..." : `Popular Colony, ${locationInfo}`}
+                            {isLoading ? "Loading..." : `Popular Colony, ${locationInfo}`}
                             </div>
                             <div className='product_card_rating'>
                                 <img src={StoreRating} alt="Image" />
@@ -113,7 +127,7 @@ const StoresList = (props) => {
                                 More mega mart
                             </div>
                             <div className='product_card_subtitle'>
-                            {loading ? "Loading..." : `14, Harlur, ${locationInfo}`}
+                            {isLoading ? "Loading..." : `14, Harlur, ${locationInfo}`}
                             </div>
                             <div className='product_card_rating'>
                                 <img src={StoreRating} alt="Store_Img" />
@@ -131,7 +145,7 @@ const StoresList = (props) => {
                                 Ratnadeep Supermarket
                             </div>
                             <div className='product_card_subtitle'>
-                                {loading ? "Loading..." : `Sarjapur Main Road, ${locationInfo}`}
+                                {isLoading ? "Loading..." : `Sarjapur Main Road, ${locationInfo}`}
                             </div>
                             <div className='product_card_rating'>
                                 <img src={StoreRating} alt="Store_Img" />
