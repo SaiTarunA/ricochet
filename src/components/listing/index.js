@@ -10,7 +10,7 @@ import { Overlay } from "./Overlay";
 import { GlobalStyles, lightGray } from "./GlobalStyles";
 import "./style.css";
 
-function App() {
+function ProductList() {
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
   const [cartOpen, isCartOpen] = useState(false);
@@ -139,5 +139,5 @@ const H1 = styled.h1`
   text-align: center;
   color: ${lightGray};
 `;
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
