@@ -1,0 +1,63 @@
+.scanner_section {
+    margin: 0px !important;
+}
+
+.viewport {
+    height: 100vh;
+}
+
+.viewport video, .viewport canvas {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.barcode_scanner {
+    position: relative;
+}
+
+.barcode_overlay_section_bg {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0px;
+    background: var(--background);
+}
+
+.barcode_overlay_section {
+    display: flex;
+    align-items: center;
+    gap: min(20px, 2vw);
+}
+
+.barcode_overlay_section>input {
+    height: 50px;
+    min-width: 100px;
+}
+
+.barcode_overlay_section>button {
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0.75rem;
+}
+
+.loading_bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: radial-gradient(transparent, black);
+    z-index: 11;
+}
+
+.loading_bg>img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

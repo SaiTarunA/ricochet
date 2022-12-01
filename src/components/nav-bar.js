@@ -1,9 +1,12 @@
 import React from 'react'
 import "../styles/nav-bar.css"
+import { useGlobalState } from './state'
 
 const NavBar = () => {
+    const [navBarInnerComp] = useGlobalState("navBarInnerComp")
+    console.log(navBarInnerComp)
   return (
-    <header className='navbar'>This is nav Bar</header>
+    <header className='navbar'>{navBarInnerComp}</header>
   )
 }
 

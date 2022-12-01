@@ -1,0 +1,33 @@
+.home {
+    max-width: 500px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home_logo, .home_image {
+    width: 90%;
+}
+
+.home_logo svg, .home_image svg {
+    width: 100%;
+    height: auto;
+}
+
+.home_text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_title{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.home_subtitle{
+    font-size: 1rem;
+}
