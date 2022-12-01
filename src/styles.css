@@ -1,16 +1,4 @@
-/* body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  } */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --text: #eeeeee;
@@ -22,6 +10,75 @@
 *, body {
     margin: 0;
     box-sizing: border-box;
-    background: var(--background);
     color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.App {
+    background: var(--background);
+}
+
+.workspace {
+    width: 80%;
+    margin: auto;
+    z-index: 2;
+}
+
+button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    border: 2px solid var(--primary);
+    box-sizing: border-box;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    background: var(--background);
+}
+
+button>img {
+    width: 1.15rem;
+    height: 1.15rem;
+    object-fit: contain;
+}
+
+button[type="primary"] {
+    border: none;
+    background: var(--primary);
+}
+
+input {
+    background: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    color: var(--text);
+    box-sizing: border-box;
+    flex: 1;
+  }
+  
+  input:focus-visible {
+    outline: 2px solid var(--primary);
+  }
+  
+  ::placeholder {
+    font-weight: 700;
+  }
+
+
+
+@media only screen and (1200px < width <= 1400px) {
+    .workspace {
+      width: 85%;
+    }
+}
+  
+@media only screen and (width <= 1200px) {
+.workspace {
+    width: 90%;
+}
 }

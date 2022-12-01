@@ -4,11 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import { CART_PAGE_LINK, NO_PRODUCT_PAGE_LINK } from '../../constants/Global';
 import { setGlobalState, useGlobalState } from '../../state';
 import Scanner from './Scanner'
+import RetryIcon from "../../../assets/retry_icon.svg"
+import SearchIcon from "../../../assets/search_icon.svg"
+import LoadingGif from "../../../assets/loading.gif"
 
 const BarcodeScanner = () => {
     const [scanResult] = useGlobalState("scanResult")
     const [codeText] = useGlobalState("codeText")
     const [finalCode] = useGlobalState("finalCode")
+    const [loading, setLoading] = React.useState(false)
 
     const navigate = useNavigate()
 
@@ -33,6 +37,7 @@ const BarcodeScanner = () => {
       };
       const fetchData = async (url) => {
         try {
+            setLoading(true)
             axios.request({
                 method: 'GET',
                 url: 'https://barcodes1.p.rapidapi.com/',
@@ -42,7 +47,7 @@ const BarcodeScanner = () => {
                   'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
                 }
               }).then(function (response) {
-                console.log(response.data)
+                setLoading(false)
                 localStorage.removeItem("scannedProductData")
                 localStorage.setItem('scannedProductData', JSON.stringify(response.data));
                 if ("product" in response.data) {
@@ -51,11 +56,13 @@ const BarcodeScanner = () => {
                     navigate(NO_PRODUCT_PAGE_LINK)
                 }
               }).catch(function (error) {
+                setLoading(false)
                 console.log(error)
                 navigate(NO_PRODUCT_PAGE_LINK)
               })
         } catch (error) {
             console.log(error.response)
+            setLoading(false)
             // navigate(NO_PRODUCT_PAGE_LINK)
         }
       }
@@ -72,16 +79,24 @@ const BarcodeScanner = () => {
       }, [scanResult, codeText])
       
   return (
-    <div>
-        <span>Barcode Scanner</span>
+    <div className='barcode_scanner'>
+        {loading && 
+        <div className='loading_bg'>
+            <img src={LoadingGif} alt="Loading..."/>
+        </div>}
+        <div className='barcode_overlay_section_bg'>
+            <div className='barcode_overlay_section workspace'>
         <input
+        placeholder='Enter Code'
         value={scanResult[0] && scanResult[0].codeResult
             ? scanResult[0].codeResult.code
             : codeText}
         onChange={(e) => {handleInputChange(e)}}
         />
-        <button onClick={handleRetryClick}>Retry</button>
-        <button onClick={handleSearchClick}>Search</button>
+        <button onClick={handleSearchClick} type="primary"><img src={SearchIcon} alt="Search" /></button>
+        <button onClick={handleRetryClick}><img src={RetryIcon} alt="Retry" /></button>
+        </div>
+        </div>
         <Scanner onDetected={_onDetected} />
     </div>
   )
