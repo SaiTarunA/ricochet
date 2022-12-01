@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ricochet/static/css/main.91aa5e61.css",
+    "main.js": "/ricochet/static/js/main.a8093674.js",
+    "index.html": "/ricochet/index.html",
+    "main.91aa5e61.css.map": "/ricochet/static/css/main.91aa5e61.css.map",
+    "main.a8093674.js.map": "/ricochet/static/js/main.a8093674.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91aa5e61.css",
+    "static/js/main.a8093674.js"
+  ]
+}
