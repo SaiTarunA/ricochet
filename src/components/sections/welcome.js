@@ -3,6 +3,8 @@ import { setGlobalState } from '../state'
 import "../../styles/welcome.css"
 import { NavLink } from 'react-router-dom'
 import { SCAN_PAGE_LINK } from '../constants/Global'
+import "../../styles/welcome.css"
+import {ReactComponent as Logo} from "../../assets/logo_white.svg"
 
 const Welcome = (props) => {
 React.useEffect(() => {
@@ -13,7 +15,9 @@ if (props.hasNavBar === true) {
 
     return (
         <section style={props.sectionStyle}>
-            <div>Welcome</div>
+            <div className="home_logo">
+                <Logo />
+            </div>
             <NavLink to={SCAN_PAGE_LINK}>
                 <button>Scan Code</button>
             </NavLink>

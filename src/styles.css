@@ -13,8 +13,8 @@
   } */
 
 :root {
-    --text: #000;
-    --background: #FFF;
+    --text: #eeeeee;
+    --background: #222831;
     --primary: #52C1FF;
     --nav-height: 70px;
 }
@@ -23,4 +23,5 @@
     margin: 0;
     box-sizing: border-box;
     background: var(--background);
+    color: var(--text);
 }
