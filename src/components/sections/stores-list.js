@@ -69,7 +69,6 @@ const StoresList = (props) => {
                 }
             }
             axios.request(options).then(function (response) {
-                console.log(response.data);
                 setLoading(false)
                 const resultObj = response.data.address
                 setGlobalState("locationInfo", `${resultObj.postcode}, ${resultObj.city}, ${resultObj.state}, ${resultObj.country}`)

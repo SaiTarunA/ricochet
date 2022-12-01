@@ -22,7 +22,6 @@ const BarcodeScanner = () => {
       };
 
       const handleInputChange = (e) => {
-        console.log(e.target.value)
         let localScanResult = [...scanResult]
         if (localScanResult[0] && localScanResult[0].codeResult) {
             localScanResult[0].codeResult.code = e.target.value
