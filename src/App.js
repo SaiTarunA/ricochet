@@ -8,6 +8,7 @@ import Scanner from "./components/sections/scanner";
 import Welcome from "./components/sections/welcome";
 import { setGlobalState, useGlobalState } from "./components/state";
 import "./styles.css";
+import {Listing} from "./components/listing"
 
 function App() {
   const [hasNavBar] = useGlobalState("hasNavBar");
@@ -43,7 +44,7 @@ function App() {
         <Route
           exact
           path={CART_PAGE_LINK}
-          element={<Cart hasNavBar={hasNavBar} sectionStyle={sectionStyle}/>}
+          element={<Listing/>}
         />
         <Route
           exact

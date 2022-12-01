@@ -10,7 +10,7 @@ import { Overlay } from "./Overlay";
 import { GlobalStyles, lightGray } from "./GlobalStyles";
 import "./style.css";
 
-function App() {
+export function Listing() {
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
   const [cartOpen, isCartOpen] = useState(false);
@@ -21,7 +21,7 @@ function App() {
         if (i === p) {
           setCart([
             ...cart,
-            { name: item.name, price: item.price, quantity: item.quantity }
+            { name: item.name, price: item.price, quantity: item.quantity },
           ]);
           return { ...item, inCart: true };
         }
@@ -50,7 +50,7 @@ function App() {
           return item;
         })
       );
-    }
+    },
   };
 
   const decreaseQuantity = {
@@ -73,7 +73,7 @@ function App() {
           return item;
         })
       );
-    }
+    },
   };
 
   const removeFromCart = (i) => {
@@ -139,5 +139,3 @@ const H1 = styled.h1`
   text-align: center;
   color: ${lightGray};
 `;
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
