@@ -8,6 +8,9 @@ const { setGlobalState, useGlobalState } = createGlobalState({
   finalCode: "",
   navBarInnerComp: null,
   isLoading: false,
+  latitude: "",
+  longitude: "",
+  locationInfo:""
 });
 
 export { useGlobalState, setGlobalState };

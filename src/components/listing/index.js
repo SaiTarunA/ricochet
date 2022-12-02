@@ -12,8 +12,8 @@ import "./style.css";
 import { setGlobalState, useGlobalState } from "../state";
 import LoadingGif from "../../assets/loading.gif";
 
-export function Listing() {
-  let products = JSON.parse(localStorage.getItem("scannedProductData"));
+export function Listing(props) {
+  let products = localStorage.getItem("scannedProductData");
   let finalProducts;
   let shouldConsiderLocalStorageProducts = false;
 
@@ -21,7 +21,7 @@ export function Listing() {
     shouldConsiderLocalStorageProducts = false;
   } else if (products && JSON.stringify(products) != "{}") {
     shouldConsiderLocalStorageProducts = true;
-    finalProducts = [products];
+    finalProducts = [JSON.parse(products)];
   }
 
   console.log("final_check", shouldConsiderLocalStorageProducts, finalProducts);
@@ -117,8 +117,14 @@ export function Listing() {
 
   const cartCountTotal = cart.reduce((acc, item) => acc + item.quantity, 0);
 
+  React.useEffect(() => {
+    if (props.hasNavBar === true) {
+      setGlobalState("hasNavBar", false);
+    }
+  }, [props.hasNavBar]);
+
   return (
-    <>
+    <section style={props.sectionStyle}>
       {isLoading && (
         <div className="loading_bg">
           <img src={LoadingGif} alt="Loading..." />
@@ -147,7 +153,7 @@ export function Listing() {
           addToCart={addToCart}
         />
       </Wrapper>
-    </>
+    </section>
   );
 }
 

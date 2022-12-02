@@ -1,4 +1,5 @@
 export const MAIN_PAGE_LINK = "/";
+export const STORES_LIST_PAGE_LINK = "/storeslist"
 export const SCAN_PAGE_LINK = "/scan";
 export const CART_PAGE_LINK = "/cart";
 export const NO_PRODUCT_PAGE_LINK = "/productnotfound";

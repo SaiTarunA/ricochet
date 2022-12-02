@@ -29,3 +29,15 @@
 .centered img {
   width: 150px;
 }
+
+.more-width {
+  min-width: 400px;
+}
+@media screen and (min-width: 480px) {
+  .more-width {
+    width: 650px;
+  }
+}
+.pt {
+  padding-top: 50px;
+}

@@ -4,7 +4,7 @@ import { useGlobalState } from './state'
 
 const NavBar = () => {
     const [navBarInnerComp] = useGlobalState("navBarInnerComp")
-    console.log(navBarInnerComp)
+
   return (
     <header className='navbar'>{navBarInnerComp}</header>
   )
