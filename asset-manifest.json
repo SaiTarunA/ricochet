@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ricochet/static/css/main.9b1d240d.chunk.css",
-    "main.js": "/ricochet/static/js/main.2172a171.chunk.js",
-    "main.js.map": "/ricochet/static/js/main.2172a171.chunk.js.map",
+    "main.js": "/ricochet/static/js/main.2bf8b01a.chunk.js",
+    "main.js.map": "/ricochet/static/js/main.2bf8b01a.chunk.js.map",
     "runtime~main.js": "/ricochet/static/js/runtime~main.96d2087a.js",
     "runtime~main.js.map": "/ricochet/static/js/runtime~main.96d2087a.js.map",
     "static/js/2.94f31946.chunk.js": "/ricochet/static/js/2.94f31946.chunk.js",
     "static/js/2.94f31946.chunk.js.map": "/ricochet/static/js/2.94f31946.chunk.js.map",
     "index.html": "/ricochet/index.html",
-    "precache-manifest.b9c23a92e874c6a5e7150586a62e8916.js": "/ricochet/precache-manifest.b9c23a92e874c6a5e7150586a62e8916.js",
+    "precache-manifest.0df36798047cc5452974cde64f2feefd.js": "/ricochet/precache-manifest.0df36798047cc5452974cde64f2feefd.js",
     "service-worker.js": "/ricochet/service-worker.js",
     "static/css/main.9b1d240d.chunk.css.map": "/ricochet/static/css/main.9b1d240d.chunk.css.map",
     "static/media/edit_icon.svg": "/ricochet/static/media/edit_icon.8c756a0a.svg",
@@ -20,8 +20,8 @@
     "static/media/right_arrow_icon.svg": "/ricochet/static/media/right_arrow_icon.7031021c.svg",
     "static/media/search_icon.svg": "/ricochet/static/media/search_icon.d63e4d06.svg",
     "static/media/store_dmart.svg": "/ricochet/static/media/store_dmart.a3a6f21a.svg",
-    "static/media/store_more.svg": "/ricochet/static/media/store_more.46f0fe30.svg",
+    "static/media/store_more.svg": "/ricochet/static/media/store_more.380fa06f.svg",
     "static/media/store_rating.svg": "/ricochet/static/media/store_rating.3896cf31.svg",
-    "static/media/store_ratnadeep.svg": "/ricochet/static/media/store_ratnadeep.7fb654af.svg"
+    "static/media/store_ratnadeep.svg": "/ricochet/static/media/store_ratnadeep.43459faf.svg"
   }
 }
