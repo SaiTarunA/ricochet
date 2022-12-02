@@ -7,6 +7,24 @@ import Scanner from './Scanner';
 import RetryIcon from "../../../assets/retry_icon.svg";
 import SearchIcon from "../../../assets/search_icon.svg";
 import LoadingGif from "../../../assets/loading.gif";
+import {pick} from "../ObjectHelper"
+
+
+const  getRndInteger = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+const getDataInRequiredFormat = (data) => {
+  console.log('check_data', data)
+  let dummyImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQez_a9klxE3ZZGZTqtgVpLt0qk2NXshDGZ3tX8SuvgjmVs9boY6-98LvRT4vBF-yG3qBY&usqp=CAU'
+  let newData = pick(data['product'], ['title', 'images', 'description']);
+  newData['name'] = newData['title']
+  newData['src'] = newData['images'] && newData['images'].length > 0 ? newData['images'][0] : dummyImage
+  newData['price'] = getRndInteger(50, 200)
+  newData['quantity'] = 1
+  newData['inCart'] = false
+  return newData
+}
 
 const BarcodeScanner = () => {
     const [scanResult] = useGlobalState("scanResult")
@@ -49,17 +67,19 @@ const BarcodeScanner = () => {
               }).then(function (response) {
                 setLoading(false)
                 localStorage.removeItem("scannedProductData")
-                localStorage.setItem('scannedProductData', JSON.stringify(response.data));
+                localStorage.setItem('scannedProductData', JSON.stringify(getDataInRequiredFormat(response.data)));
                 if ("product" in response.data) {
                     navigate(CART_PAGE_LINK)
                 } else {
                     // navigate(NO_PRODUCT_PAGE_LINK)
+                    localStorage.removeItem("scannedProductData")
                     navigate(CART_PAGE_LINK)
                 }
               }).catch(function (error) {
                 setLoading(false)
                 console.log(error)
                 // navigate(NO_PRODUCT_PAGE_LINK)
+                localStorage.removeItem("scannedProductData")
                 navigate(CART_PAGE_LINK)
               })
         } catch (error) {

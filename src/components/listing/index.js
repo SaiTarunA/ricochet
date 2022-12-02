@@ -13,9 +13,24 @@ import { setGlobalState, useGlobalState } from "../state";
 import LoadingGif from "../../assets/loading.gif";
 
 export function Listing() {
+  let products = JSON.parse(localStorage.getItem("scannedProductData"));
+  let finalProducts;
+  let shouldConsiderLocalStorageProducts = false;
+
+  if (products == null || products == undefined) {
+    shouldConsiderLocalStorageProducts = false;
+  } else if (products && JSON.stringify(products) != "{}") {
+    shouldConsiderLocalStorageProducts = true;
+    finalProducts = [products];
+  }
+
+  console.log("final_check", shouldConsiderLocalStorageProducts, finalProducts);
+
   const [isLoading] = useGlobalState("isLoading");
   const [cart, setCart] = useState([]);
-  const [items, setItems] = useState(API);
+  const [items, setItems] = useState(
+    shouldConsiderLocalStorageProducts ? finalProducts : API
+  );
   const [cartOpen, isCartOpen] = useState(false);
 
   const addToCart = (i) => {

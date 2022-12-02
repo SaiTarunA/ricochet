@@ -4,6 +4,7 @@ import { AddButton, SubtractButton } from "./AddSubtractButton";
 import { P } from "./P";
 import { lightGray } from "./GlobalStyles";
 import styled from "styled-components";
+import { trimTitle } from "../helpers/TextHelper";
 
 export const ListedItems = ({
   items,
@@ -14,7 +15,7 @@ export const ListedItems = ({
   <Wrapper>
     {items.map((item, i) => (
       <Column key={item.name}>
-        <H4>{item.name}</H4>
+        <H4>{trimTitle(item.name)}</H4>
         <P>₹{item.price}</P>
 
         {!item.inCart && (
