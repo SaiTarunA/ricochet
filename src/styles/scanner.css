@@ -26,6 +26,22 @@
     background: var(--background);
 }
 
+.scanner_icon {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.scanner_icon img {
+    margin: auto;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    max-width: 320px;
+}
+
 .barcode_overlay_section {
     display: flex;
     align-items: center;

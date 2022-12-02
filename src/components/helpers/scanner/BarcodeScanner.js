@@ -7,6 +7,7 @@ import Scanner from "./Scanner";
 import RetryIcon from "../../../assets/retry_icon.svg";
 import SearchIcon from "../../../assets/search_icon.svg";
 import LoadingGif from "../../../assets/loading.gif";
+import ScannerImage from "../../../assets/scanner.svg";
 import { pick } from "../ObjectHelper";
 import { useRef } from "react";
 
@@ -129,6 +130,9 @@ const BarcodeScanner = () => {
           <img src={LoadingGif} alt="Loading..." />
         </div>
       )}
+      <div className="scanner_icon">
+        <img src={ScannerImage}/>
+      </div>
       <div className="barcode_overlay_section_bg">
         <div className="barcode_overlay_section workspace">
           <input
