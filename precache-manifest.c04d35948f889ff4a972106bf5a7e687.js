@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7099c8493fd8b6de736ee6b08f52ffe4",
+    "revision": "295b9776856a844ed59c02f438281d73",
     "url": "/ricochet/index.html"
   },
   {
-    "revision": "21766b485165bad7bf09",
-    "url": "/ricochet/static/css/main.9b1d240d.chunk.css"
+    "revision": "3f7f5f0593de6df12b20",
+    "url": "/ricochet/static/css/main.e15f4e92.chunk.css"
   },
   {
-    "revision": "8b0dcab772d036d33cce",
-    "url": "/ricochet/static/js/2.94f31946.chunk.js"
+    "revision": "9b8b3e6c1434cc136775",
+    "url": "/ricochet/static/js/2.a6169802.chunk.js"
   },
   {
-    "revision": "21766b485165bad7bf09",
-    "url": "/ricochet/static/js/main.639a8b8a.chunk.js"
+    "revision": "3f7f5f0593de6df12b20",
+    "url": "/ricochet/static/js/main.cc6d437f.chunk.js"
   },
   {
     "revision": "324177345c4d101fa635",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7031021cf7a03ddf9622651aa4751932",
     "url": "/ricochet/static/media/right_arrow_icon.7031021c.svg"
+  },
+  {
+    "revision": "523ff9dcdd87e907c833989972ef4cc5",
+    "url": "/ricochet/static/media/scanner.523ff9dc.svg"
   },
   {
     "revision": "d63e4d064d5967a0dca15b6e0e6f7ed8",
