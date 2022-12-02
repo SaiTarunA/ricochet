@@ -26,11 +26,11 @@ if (props.hasNavBar === true) {
                 </div>
                 <div className="home_text">
                     <div className="home_title">
-                        Scan and Go
+                        Scan &#183; Save &#183; Go
                     </div>
-                    <div className="home_subtitle">
-                        Like a PRO
-                    </div>
+                    {/* <div className="home_subtitle">
+                    Fast, Secure, and Convenient
+                    </div> */}
                 </div>
                 <NavLink to={STORES_LIST_PAGE_LINK} style={{width: "100%"}}>
                     <button type="primary" style={{width: "100%"}}>
