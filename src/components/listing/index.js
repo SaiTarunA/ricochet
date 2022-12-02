@@ -24,8 +24,6 @@ export function Listing(props) {
     finalProducts = [JSON.parse(products)];
   }
 
-  console.log("final_check", shouldConsiderLocalStorageProducts, finalProducts);
-
   const [isLoading] = useGlobalState("isLoading");
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(
